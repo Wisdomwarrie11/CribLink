@@ -1,31 +1,13 @@
 // src/components/Home.js
 import React from 'react';
 import './Home.css'; // Import CSS for styling
+import Navbar from '../Navbar';
 
 const year = new Date
 
 const Home = () => {
   return (
     <div>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">CribLink</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/login">Login</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/register">Register</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="hero">
@@ -98,7 +80,7 @@ const Home = () => {
         </div>
       </section>
 
-        {/* Interesting Facts Section */}
+        {/* Interesting Facts Section
         <section className="facts-section">
         <div className="container">
           <h2>Interesting Facts to Know</h2>
@@ -109,7 +91,7 @@ const Home = () => {
             <li>Networking with other students can lead to great housing opportunities!</li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="footer">

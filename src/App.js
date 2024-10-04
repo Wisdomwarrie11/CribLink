@@ -7,11 +7,17 @@ import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import AccommodationDetail from './components/AccommodationDetail';
 import ItemDetail from './components/ItemDetail';
-
+import Navbar from './Navbar';
 function App() {
   return (
+
+    
     <Router>
+      <div>
+      <Navbar/>
+      </div>
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
