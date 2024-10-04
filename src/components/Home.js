@@ -12,8 +12,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div style ={{paddingTop: '100px'}}className="hero-content">
-          <h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1>
-          <h2>All In One Place!</h2>
+          <strong><h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1></strong>
+          <strong><h2>All In One Place!</h2></strong>
           <a style ={{marginTop: '50px'}}href="/listings" className="btn btn-primary">Start Searching</a>
         </div>
       </section>
@@ -94,7 +94,7 @@ const Home = () => {
         </div>
       </section> */}
 
-<div className="container-fluid" style={{ backgroundColor: '#011e3b', color: 'white', paddingTop: '20px', }}>
+<div className="container-fluid" style={{ backgroundColor: '#00050a', color: 'white', paddingTop: '20px', }}>
   <div className="row">
         <div style = {{marginTop: '45px'}}className="col-md-8">
         <ul>
@@ -121,7 +121,7 @@ const Home = () => {
   </div>
 
       {/* Footer */}
-      <div className="container-fluid" style={{paddingTop: '10px', backgroundColor: '#011e3b', color: 'white'}}>
+      <div className="container-fluid" style={{paddingTop: '10px', backgroundColor: '#00050a', color: 'white'}}>
         <div className="row">
        <div className='col text-center'>
             <p>copyright @{year.getFullYear()} CribLink All right Reserved. <span>Terms of Use. Privacy Policy</span></p>
