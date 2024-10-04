@@ -94,12 +94,40 @@ const Home = () => {
         </div>
       </section> */}
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-        <p>copyright @{year.getFullYear()} CribLink All right Reserved. <span style={{paddingLeft: '500px'}}>Terms of Use. Privacy Policy</span></p>
+<div className="container-fluid" style={{ backgroundColor: '#011e3b', color: 'white', paddingTop: '20px', }}>
+  <div className="row">
+        <div style = {{marginTop: '45px'}}className="col-md-8">
+        <ul>
+            <img  src= 'x.png' alt="logo" />
+                <p>Contact us if you have any question based <br />on partnership, sponsorship. Please contact us at <br /> @infoCribLink.com</p>
+            </ul>
+           <div className='socials' style={{paddingLeft: '50px'}}>
+           <a href=""><img src= 'fb.png' alt="" /></a>
+           <a href=""><img src= 'insta.png' lt="" /></a>
+           <a href=""><img src='linkedin.png' alt="" /></a>
+           <a href=""><img src='yt.png' alt="" /></a>
+           <a href=""><img src='x.png' alt="" /></a>
+
+           </div>
+          
         </div>
-      </footer>
+        <div className='col-md-4 py-5 px-5'>
+            <h3>Contact Information</h3>
+            <p>Email info: info@CribLink.com</p>
+            <p>Phone: 07041197027, 09029729621</p>
+            <p>Address: No.7 Victory Way, Calabar, Nigeria. </p>
+        </div>
+       </div>
+  </div>
+
+      {/* Footer */}
+      <div className="container-fluid" style={{paddingTop: '10px', backgroundColor: '#011e3b', color: 'white'}}>
+        <div className="row">
+       <div className='col text-center'>
+            <p>copyright @{year.getFullYear()} CribLink All right Reserved. <span>Terms of Use. Privacy Policy</span></p>
+        </div>
+       </div>
+        </div>
     </div>
   );
 }
