@@ -14,7 +14,7 @@ const Home = () => {
         <div style ={{paddingTop: '100px'}}className="hero-content">
           <h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1>
           <h2>All In One Place!</h2>
-          <a href="/listings" className="btn btn-primary">Start Searching</a>
+          <a style ={{marginTop: '50px'}}href="/listings" className="btn btn-primary">Start Searching</a>
         </div>
       </section>
 
