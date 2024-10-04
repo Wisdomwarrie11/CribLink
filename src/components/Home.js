@@ -12,7 +12,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div style ={{paddingTop: '100px'}}className="hero-content">
-          <h1>Find Your Perfect Apartment and Essentials</h1>
+          <h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1>
           <h2>All In One Place!</h2>
           <a href="/listings" className="btn btn-primary">Start Searching</a>
         </div>
@@ -41,10 +41,11 @@ const Home = () => {
             <div className="col-md-4">
               <div className="listing-card">
                 <img src="room2.jpg" alt="Item 1" className="listing-img"/>
-                <h3>One bedroom flat apartment </h3>
+                <h3>One bedroom flat </h3>
                 <p>₦400,000 for a year</p>
               </div>
             </div>
+            <button style={{width:'100px', height: '50px', marginLeft: '500px', borderRadius: '40px'}}>see more</button>
           </div>
         </div>
       </section>
@@ -72,7 +73,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="listing-card">
                 <img style={{height: '350px'}} src="table.jpeg" alt="Item 1" className="listing-img"/>
-                <h3>Second-hand Study Desk</h3>
+                <h3>Study Desk</h3>
                 <p>₦5,000</p>
               </div>
             </div>
