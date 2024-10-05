@@ -17,7 +17,7 @@ const LoginPage = () => {
       localStorage.setItem('token', response.data.token);
       navigate.push('/dashboard'); // Redirect to the dashboard
     } catch (err) {
-      setError(err.response?.data?.msg || 'Invalid credentials. Please register.');
+      setError(err.response?.data?.msg || 'We are so sorry. It seems you are yet to Sign up.');
     }
   };
 
