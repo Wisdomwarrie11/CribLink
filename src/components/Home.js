@@ -14,14 +14,21 @@ const Home = () => {
         <div style ={{paddingTop: '100px'}}className="hero-content">
           <strong><h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1></strong>
           <strong><h2>All In One Place!</h2></strong>
-          <a style ={{marginTop: '50px'}}href="/listings" className="btn btn-primary">Start Searching</a>
+          {/* <a style ={{marginTop: '50px'}}href="/listings" className="btn btn-primary">Start Searching</a> */}
+          <div class="search-bar">
+    <form class="form-inline d-flex justify-content-center">
+      <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search"/>
+      <button style={{backgroundColor: 'blue', color: 'white', width: '100px'}} class="btn my-2 my-sm-0 search-btn" type="submit">Search</button>
+    </form>
+  </div>
         </div>
       </section>
 
       {/* Popular Listings Section */}
       <section className="listings-section">
         <div className="container">
-          <h2>Find an accomodation</h2>
+          <h2>RECENT LISTING</h2>
+          <h3>Find your perfect accomodation</h3>
           <div className="row">
             {/* Replace these with dynamic data later */}
             <div className="col-md-4">
@@ -51,16 +58,17 @@ const Home = () => {
       </section>
 
       {/* Popular Item Listing Section */}
-      <section className="listings-section">
+      <section style={{marginTop: '0px'}} className="listings-section">
         <div className="container">
-          <h2>Find your item here</h2>
+          <h2>RECENT LISTING</h2>
+          <h3>Find the right item here</h3>
           <div className="row">
             {/* Replace these with dynamic data later */}
             <div className="col-md-4">
               <div className="listing-card">
                 <img src="gen.jpeg" alt="Room 1" className="listing-img"/>
                 <h3>Horsepower generator</h3>
-                <p>₦200,000 per month</p>
+                <p>₦200,000</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -94,7 +102,7 @@ const Home = () => {
         </div>
       </section> */}
 
-<div className="container-fluid" style={{ backgroundColor: '#00050a', color: 'white', paddingTop: '20px', }}>
+<div className="container-fluid" style={{ backgroundColor: 'rgb(31, 29, 29)', color: 'white', paddingTop: '20px', }}>
   <div className="row">
         <div style = {{marginTop: '45px'}}className="col-md-8">
         <ul>
@@ -121,7 +129,7 @@ const Home = () => {
   </div>
 
       {/* Footer */}
-      <div className="container-fluid" style={{paddingTop: '10px', backgroundColor: '#00050a', color: 'white'}}>
+      <div className="container-fluid" style={{paddingTop: '10px', backgroundColor: 'rgb(31, 29, 29)', color: 'white'}}>
         <div className="row">
        <div className='col text-center'>
             <p>copyright @{year.getFullYear()} CribLink All right Reserved. <span>Terms of Use. Privacy Policy</span></p>
