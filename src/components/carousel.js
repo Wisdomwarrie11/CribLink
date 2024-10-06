@@ -123,7 +123,7 @@ const Carousal = () =>{
         </div>
         <div className="col-6 col-sm-6 col-md-3">
           <div className="listing-card">
-            <img src="Item1.jpg" alt="Item 1" className="listing-img" />
+            <img src="table.jpg" alt="Item 1" className="listing-img" />
             <h3>Second-hand Study Desk</h3>
             <p>₦5,000</p>
           </div>
