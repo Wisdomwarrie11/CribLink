@@ -8,6 +8,10 @@ import Dashboard from './components/Dashboard';
 import AccommodationDetail from './components/AccommodationDetail';
 import ItemDetail from './components/ItemDetail';
 import Navbar from './Navbar';
+import Verify from './components/Verify';
+import StudentDashboard from './components/StudentDashboard'; // StudentDashboard component
+import AgentDashboard from './components/AgentDashboard'; // AgentDashboard component
+
 function App() {
   return (
 
@@ -20,9 +24,12 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/verify" element={<Verify />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/accommodation/:id" element={<AccommodationDetail />} />
+        <Route path="/StudentDashboard" element={<StudentDashboard />} />
+        <Route path="/AgentDashboard" element={<AgentDashboard />} />
         <Route path="/item/:id" element={<ItemDetail />} />
       </Routes>
     </Router>

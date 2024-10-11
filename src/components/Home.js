@@ -12,19 +12,22 @@ const Home = () => {
     <div>
 
       {/* Hero Section */}
-      <section className="hero">
-        <div style ={{paddingTop: '100px'}}className="hero-content">
-          <strong><h1 style={{filter: '100%'}}>Find Your Perfect Apartment and Essentials</h1></strong>
-          <strong><h2>All In One Place!</h2></strong>
-          {/* <a style ={{marginTop: '50px'}}href="/listings" className="btn btn-primary">Start Searching</a> */}
-          <div class="search-bar">
-    <form class="form-inline d-flex justify-content-center">
-      <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search"/>
-      <button style={{backgroundColor: 'blue', color: 'white', width: '100px'}} class="btn my-2 my-sm-0 search-btn" type="submit">Search</button>
-    </form>
+<section style={{backgroundColor:'whitesmoke' }} id="benefits" className="py-5">
+  <div className="container">
+   
+    <div className="row align-items-center mb-5">
+      <div className="col-md-6 Heropage">
+      <strong><h1>LEAVE HOME TO FIND HOME</h1></strong>
+      <h2>Your accomodations and essentials all in one place!</h2>
+      
+      </div>
+      <div className="col-md-6">
+        <img style={{borderRadius:'70px'}} src="guy.jpeg" alt="Students Benefits" className="img-fluid" />
+      </div>
+    </div>
   </div>
-        </div>
-      </section>
+</section>
+
 
  {/* Popular Listings Section */}
 <Carousal/>
