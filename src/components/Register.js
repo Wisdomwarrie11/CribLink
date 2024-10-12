@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Register.css';
 
 const RegisterPage = () => {
   const [name, setName] = useState('');
@@ -11,6 +12,7 @@ const RegisterPage = () => {
   const [successMessage, setSuccessMessage] = useState(''); // Track success message
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false); 
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -18,6 +20,7 @@ const RegisterPage = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await axios.post('http://localhost:5000/auth/register', {
         name,
@@ -26,7 +29,7 @@ const RegisterPage = () => {
         role,
       });
 
-      // Display the success message in the form instead of using alert
+      setLoading(false);
       setSuccessMessage('Please check your email for the verification link.');
 
       // Optionally, navigate to a different page after registration (can be delayed)
@@ -37,6 +40,7 @@ const RegisterPage = () => {
     } catch (err) {
       console.error('Error during registration:', err.response?.data || err);
       setError(err.response?.data?.msg || 'Registration failed');
+      setLoading(false);    
     }
   };
 
@@ -44,7 +48,6 @@ const RegisterPage = () => {
     <div className="form-container">
       <h2>Register</h2>
       {error && <p className="error">{error}</p>}
-      {successMessage && <p className="success">{successMessage}</p>} {/* Success message */}
       <form onSubmit={handleRegister}>
         <input
           type="text"
@@ -60,7 +63,8 @@ const RegisterPage = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <div className="password-field">
+        
+        <div className="password-input-wrapper">
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
@@ -68,15 +72,31 @@ const RegisterPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="button" onClick={togglePasswordVisibility}>
-            {showPassword ? 'Hide' : 'Show'}
+          <button
+            type="button"
+            className="toggle-password-btn"
+            onClick={togglePasswordVisibility}
+          >
+            {showPassword ? '🙈' : '👁️'}
           </button>
         </div>
+
         <select value={role} onChange={(e) => setRole(e.target.value)}>
           <option value="student">Student</option>
           <option value="agent">Agent</option>
         </select>
-        <button type="submit">Register</button>
+
+        <button type="submit" disabled={loading}>
+  {loading ? (
+    <div className="spinner">
+      <div className="double-bounce1"></div>
+      <div className="double-bounce2"></div>
+    </div>
+  ) : (
+    'Register'
+  )}
+</button>
+
       </form>
     </div>
   );

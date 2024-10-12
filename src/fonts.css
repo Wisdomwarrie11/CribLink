@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('./fonts/YourFontFile.woff2') format('woff2'), /* Modern browsers */
+         url('./fonts/YourFontFile.woff') format('woff'); /* Legacy browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Use the font */
+  body {
+    font-family: 'YourCustomFont', sans-serif; /* Fallback to sans-serif */
+  }
+  
+  .test{
+    color: rgb(240, 243, 245);
+  }

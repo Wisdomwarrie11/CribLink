@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React , {useState }from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -9,10 +9,24 @@ import AccommodationDetail from './components/AccommodationDetail';
 import ItemDetail from './components/ItemDetail';
 import Navbar from './Navbar';
 import Verify from './components/Verify';
+import ProfileSetup from './components/ProfileSetup';
 import StudentDashboard from './components/StudentDashboard'; // StudentDashboard component
 import AgentDashboard from './components/AgentDashboard'; // AgentDashboard component
 
 function App() {
+  const [studentDetails, setStudentDetails] = useState({
+    nickname: '',
+    image: '',
+    university: '',
+    country: '',
+    state: '',
+    phoneNumber: '',
+  });
+
+  const handleProfileUpdate = (profileData) => {
+    setStudentDetails(profileData);
+  };
+
   return (
 
     
@@ -30,6 +44,7 @@ function App() {
         <Route path="/accommodation/:id" element={<AccommodationDetail />} />
         <Route path="/StudentDashboard" element={<StudentDashboard />} />
         <Route path="/AgentDashboard" element={<AgentDashboard />} />
+        <Route path="/setupprofile" element={<ProfileSetup onProfileUpdate={handleProfileUpdate} />} />
         <Route path="/item/:id" element={<ItemDetail />} />
       </Routes>
     </Router>

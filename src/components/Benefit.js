@@ -34,7 +34,7 @@ return(
         </p>
       </div>
       <div className="col-md-6 order-md-1">
-        <img style={{height: '400px', width: '500px'}} src="man.jpeg" alt="Agents Benefits" className="img-fluid" />
+        <img style={{height: '400px', width: '500px'}} src="agent.jpeg" alt="Agents Benefits" className="img-fluid" />
       </div>
     </div>
   </div>

@@ -96,6 +96,8 @@ const Carousal = () =>{
         </div>
       </section>
 
+      <hr style={{width: '100%', height: '50px', BackgroundColor: 'black'}} />
+
 {/* LISTING SECTION FOR ITEMS */}
       <section className="listings-section">
         <div className="container">
