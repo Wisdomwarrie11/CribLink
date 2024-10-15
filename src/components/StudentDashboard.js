@@ -22,11 +22,17 @@ const StudentDashboard = () => {
     fetchProfileData();
   }, []);
 
-  const handleSearch = () => {
-    console.log('Searching for:', searchQuery);
+  const handleSearch = async (e) => {
+    e.preventDefault(); // Prevent default form submission
+    try {
+      const response = await axios.get(`/api/listings?query=${searchQuery}`);
+      console.log('Search results:', response.data);
+      // You could update the state to display the results
+    } catch (error) {
+      console.error('Error searching for listings:', error);
+    }
   };
-
-  const isProfileComplete = Object.values(studentDetails).every((detail) => detail !== '');
+  const isProfileComplete = Object.values(studentDetails).every((detail) => detail !== '' && detail !== undefined);
 
   return (
     <div className="dashboard-container">
@@ -41,7 +47,7 @@ const StudentDashboard = () => {
           <p><strong>Country:</strong> {studentDetails.country}</p>
           <p><strong>State:</strong> {studentDetails.state}</p>
           <p><strong>Phone Number:</strong> {studentDetails.phoneNumber}</p>
-          <Link to="/setup-profile" className="btn btn-secondary">Edit Profile</Link>
+          <Link to="/setupprofile" className="btn btn-secondary">Edit Profile</Link>
         </div>
       ) : (
         <section className="profile-update">

@@ -3,16 +3,20 @@
 /* Hero Section */
 
 .testing{
-  color: #ccc;
+  color: #89c4e3;
 }
 
-body{
-  font-family: 'Montserrat', sans-serif;
-}
- .Heropage h1 h2{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+ .Heropage h1{
+    font-family:'Montserrat', sans-serif;
     color: rgb(1, 28, 49);
-    font-weight:900;
+    font-weight:800;
+    
+  }
+
+  .Heropage h2{
+    font-family:'Montserrat', sans-serif;
+    color: rgb(1, 28, 49);
+    font-weight:700;
     
   }
   
@@ -52,7 +56,7 @@ body{
   
   .listing-img {
     width: 100%;
-    height: 2npm00px;
+    height: 200px;
     margin-bottom: 15px;
     border-radius: 5px;
   }

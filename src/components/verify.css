@@ -1,0 +1,48 @@
+/* CSS for styling the verification container */
+.verification-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px;
+  }
+  
+  .verification-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #343a40; /* Dark gray for heading */
+  }
+  
+  .verification-container p {
+    font-size: 1.1rem;
+    color: #4d5862; /* Medium gray for paragraphs */
+    margin-bottom: 1rem;
+  }
+  
+  .verification-container button {
+    background-color: #0e8fa0; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .verification-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Message styling */
+  .verification-container .message {
+    font-weight: bold;
+    color: #28a745; /* Success green for success message */
+    margin-top: 1rem;
+  }
+  
+  .verification-container .message.error {
+    color: #dc3545; /* Error red for error message */
+  }
+  

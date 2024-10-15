@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
+import './verify.css';  // Import the CSS file
 
 const VerifyEmailPage = () => {
   const [seconds, setSeconds] = useState(60);  // Set initial countdown time to 1 minute (60 seconds)
@@ -8,7 +9,6 @@ const VerifyEmailPage = () => {
   const [message, setMessage] = useState('');
   const [searchParams] = useSearchParams();  // To handle query params
   const email = searchParams.get('email');   // Extract email from query params (if sent via URL)
-  
 
   useEffect(() => {
     if (seconds > 0) {
@@ -39,10 +39,12 @@ const VerifyEmailPage = () => {
       )}
       
       {showResendLink && (
-        <button onClick={handleResendVerification}>Send Verification Code Again</button>
+        <button className="btn btn-primary" onClick={handleResendVerification}>
+          Send Verification Code Again
+        </button>
       )}
 
-      {message && <p>{message}</p>}
+      {message && <p className={`message ${message.includes('Failed') ? 'error' : ''}`}>{message}</p>}
     </div>
   );
 };

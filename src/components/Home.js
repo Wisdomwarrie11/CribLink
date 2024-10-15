@@ -12,17 +12,17 @@ const Home = () => {
     <div>
 
       {/* Hero Section */}
-<section style={{backgroundColor:'white' }} id="benefits" className="py-5">
+<section style={{backgroundColor:'white' }} className="py-5">
   <div className="container">
    
     <div className="row align-items-center mb-5">
-      <div className="col-md-6 Heropage px-lg-2">
+      <div style ={{backgroundColor: ''}} className="col-md-6 Heropage px-lg-2">
       <strong><h1>LEAVE HOME TO FIND HOME</h1></strong>
-      <h2>Your accomodations and essentials all in one place!</h2>
+      <em><h2>Your accomodations and essentials all in one place!</h2></em>
       
       </div>
       <div className="col-md-6">
-        <img style={{borderRadius:'70px'}} src="happyguy.jpeg" alt="Students Benefits" className="img-fluid" />
+        <img style={{borderRadius:'70px', borderStyle: 'block', borderColor: 'black'}} src="chairgirl.jpeg" alt="Students Benefits" className="img-fluid" />
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@ const Home = () => {
 
  {/* Popular Listings Section */}
 
-<section style={{backgroundColor: 'rgb(240, 243, 245)'}}>
+<section style={{backgroundColor: 'rgb(240, 243, 245)', marginTop: '0px'}}>
 <Carousal/>
 <Benefit/>
 </section>
