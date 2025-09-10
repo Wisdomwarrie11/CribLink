@@ -54,6 +54,9 @@ const ListingsPage = () => {
           <option value="Education">Education</option>
           <option value="Beauty">Beauty</option>
         </select>
+        <button className="btn btn-secondary" onClick={() => navigate("/")}>
+Change Location
+</button>
       </div>
 
       <div className="row">
@@ -65,7 +68,7 @@ const ListingsPage = () => {
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{service.title}</h5>
                   <p className="card-text text-muted">{service.description}</p>
-                  <button  style={{backgroundColor: 'rgb(3, 44, 80)'}} className="btn btn-primary mt-auto" onClick={() => navigate(`/services/${service.id}`)}>See More</button>
+                  <button className="btn btn-secondary mt-auto" onClick={() => navigate(`/services/${service.id}`)}>See More</button>
                 </div>
               </div>
             </div>
