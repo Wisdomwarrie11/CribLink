@@ -5,26 +5,51 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ListingsPage.css";
 
 const servicesData = [
-  // Cleaning
-  { id: 1, category: "Cleaning", title: "SparkleClean", city: "Ikeja", state: "Lagos", description: "Home and office cleaning.", image: "https://images.unsplash.com/photo-1581579188871-45ea61f2a0d4" },
-  { id: 2, category: "Cleaning", title: "FreshStart Cleaners", city: "Lekki", state: "Lagos", description: "Affordable cleaning.", image: "https://images.unsplash.com/photo-1600585154340-9f6c94b1a43a" },
-  { id: 3, category: "Cleaning", title: "Elite Cleaning Hub", city: "Wuse", state: "Abuja", description: "Premium deep cleaning.", image: "https://images.unsplash.com/photo-1597093720334-c0c1e9f46c62" },
+  // Lagos
+  { id: 1, category: "Cleaning", title: "SparkleClean", city: "Ikeja", state: "Lagos", description: "Home and office cleaning.", image: "/images/cleaning1.jpg" },
+  { id: 2, category: "Catering", title: "Delish Catering", city: "Lekki", state: "Lagos", description: "Event catering for parties and weddings.", image: "/images/catering1.jpg" },
+  { id: 3, category: "Education", title: "TopClass Tutorials", city: "Yaba", state: "Lagos", description: "Exam prep and after-school support.", image: "/images/education1.jpg" },
+  { id: 4, category: "Beauty", title: "Lush Beauty Bar", city: "Surulere", state: "Lagos", description: "Makeup and spa services.", image: "/images/beauty1.jpg" },
 
-  // Catering
-  { id: 4, category: "Catering", title: "Delish Catering", city: "Lekki", state: "Lagos", description: "Event catering.", image: "https://images.unsplash.com/photo-1543353071-873f17a7a088" },
-  { id: 5, category: "Catering", title: "Naija Tastes", city: "Port Harcourt", state: "Rivers", description: "Local and continental dishes.", image: "https://images.unsplash.com/photo-1516685018646-549d6c64c1f6" },
-  { id: 6, category: "Catering", title: "Abuja Fine Dining", city: "Maitama", state: "Abuja", description: "Professional chefs.", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836" },
+  // Abuja
+  { id: 5, category: "Cleaning", title: "Elite Cleaning Hub", city: "Wuse", state: "Abuja", description: "Premium deep cleaning.", image: "/images/cleaning2.jpg" },
+  { id: 6, category: "Catering", title: "Abuja Fine Dining", city: "Maitama", state: "Abuja", description: "Professional chefs for high-end dining.", image: "/images/catering2.jpg" },
+  { id: 7, category: "Education", title: "Abuja Scholars", city: "Gwarinpa", state: "Abuja", description: "Private tutors for WAEC, JAMB, IELTS.", image: "/images/education2.jpg" },
+  { id: 8, category: "Beauty", title: "Glamour Touch Salon", city: "Asokoro", state: "Abuja", description: "Hair, nails, and spa treatments.", image: "/images/beauty2.jpg" },
 
-  // Education
-  { id: 7, category: "Education", title: "Bright Minds Tutors", city: "Port Harcourt", state: "Rivers", description: "Private tutors for all subjects.", image: "https://images.unsplash.com/photo-1584697964154-27e5d9c19f3c" },
-  { id: 8, category: "Education", title: "TopClass Tutorials", city: "Ikeja", state: "Lagos", description: "Exam prep and after-school support.", image: "https://images.unsplash.com/photo-1513258496099-48168024aec0" },
-  { id: 9, category: "Education", title: "Abuja Scholars", city: "Wuse", state: "Abuja", description: "Experienced teachers for WAEC, JAMB, IELTS.", image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" },
+  // Rivers
+  { id: 9, category: "Cleaning", title: "PHC Clean Team", city: "Port Harcourt", state: "Rivers", description: "Affordable cleaning services.", image: "/images/cleaning3.jpg" },
+  { id: 10, category: "Catering", title: "Naija Tastes", city: "Bonny", state: "Rivers", description: "Local and continental dishes.", image: "/images/catering3.jpg" },
+  { id: 11, category: "Education", title: "Bright Minds Tutors", city: "Obio-Akpor", state: "Rivers", description: "Private tutors for all subjects.", image: "/images/education3.jpg" },
+  { id: 12, category: "Beauty", title: "Port Harcourt Glam", city: "Port Harcourt", state: "Rivers", description: "Affordable beauty treatments.", image: "/images/beauty3.jpg" },
 
-  // Beauty
-  { id: 10, category: "Beauty", title: "Glamour Touch Salon", city: "Wuse", state: "Abuja", description: "Hair, nails, and spa treatments.", image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30" },
-  { id: 11, category: "Beauty", title: "Lush Beauty Bar", city: "Lekki", state: "Lagos", description: "Makeup and beauty services.", image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511" },
-  { id: 12, category: "Beauty", title: "Port Harcourt Glam", city: "Port Harcourt", state: "Rivers", description: "Affordable beauty treatments.", image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" },
+  // Cross River
+  { id: 13, category: "Cleaning", title: "Calabar Shine", city: "Calabar", state: "Cross River", description: "Reliable house cleaning.", image: "/images/cleaning4.jpg" },
+  { id: 14, category: "Catering", title: "Cross River Kitchen", city: "Ogoja", state: "Cross River", description: "Traditional and modern dishes.", image: "/images/catering4.jpg" },
+  { id: 15, category: "Beauty", title: "Obudu Glam", city: "Obudu", state: "Cross River", description: "Makeup and beauty services.", image: "/images/beauty4.jpg" },
+
+  // Akwa Ibom
+  { id: 16, category: "Cleaning", title: "Uyo Sparkle", city: "Uyo", state: "Akwa Ibom", description: "Residential and office cleaning.", image: "/images/cleaning5.jpg" },
+  { id: 17, category: "Catering", title: "Akwa Ibom Delights", city: "Eket", state: "Akwa Ibom", description: "Event catering and pastries.", image: "/images/catering5.jpg" },
+  { id: 18, category: "Education", title: "SmartKids Tutors", city: "Ikot Ekpene", state: "Akwa Ibom", description: "Private home lessons.", image: "/images/education4.jpg" },
+
+  // Delta
+  { id: 19, category: "Cleaning", title: "Asaba Sparkle", city: "Asaba", state: "Delta", description: "Quick home cleaning services.", image: "/images/cleaning6.jpg" },
+  { id: 20, category: "Catering", title: "Warri Kitchen", city: "Warri", state: "Delta", description: "Finger foods and traditional meals.", image: "/images/catering6.jpg" },
+  { id: 21, category: "Beauty", title: "Delta Glam", city: "Sapele", state: "Delta", description: "Salon and spa services.", image: "/images/beauty5.jpg" },
+
+  // Enugu
+  { id: 22, category: "Cleaning", title: "Enugu Sparkle", city: "Enugu", state: "Enugu", description: "Trusted cleaning services.", image: "/images/cleaning7.jpg" },
+  { id: 23, category: "Education", title: "Nsukka Scholars", city: "Nsukka", state: "Enugu", description: "University prep tutors.", image: "/images/education5.jpg" },
+  { id: 24, category: "Beauty", title: "Enugu Glam Bar", city: "Agbani", state: "Enugu", description: "Hair and nails services.", image: "/images/beauty6.jpg" },
+
+  // Kano
+  { id: 25, category: "Cleaning", title: "Kano Cleaners", city: "Kano", state: "Kano", description: "Household and office cleaning.", image: "/images/cleaning8.jpg" },
+  { id: 26, category: "Catering", title: "Kano Feast", city: "Gwale", state: "Kano", description: "Catering for weddings and parties.", image: "/images/catering7.jpg" },
+  { id: 27, category: "Education", title: "Tarauni Tutors", city: "Tarauni", state: "Kano", description: "Private academic support.", image: "/images/education6.jpg" },
+  { id: 28, category: "Beauty", title: "Kano Beauty Hub", city: "Nasarawa", state: "Kano", description: "Beauty and spa services.", image: "/images/beauty7.jpg" },
 ];
+
 
 const ListingsPage = () => {
   const { state, city } = useParams();
