@@ -1,0 +1,32 @@
+.hero-container {
+    background: url("") center/cover no-repeat;
+    position: relative;
+  }
+  
+  .hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    padding-top: 80px;
+  }
+  
+  .hero-content h1,
+  .hero-content p {
+    animation: fadeInDown 1s ease forwards;
+  }
+  
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  button{
+    background-color:rgb(42, 134, 214);
+  }
